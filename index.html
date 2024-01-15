@@ -43,8 +43,14 @@
         name: "Demo",
         repo: "karlorz/docsify-demo",
         loadSidebar: true,
-        homepage: 'introduction.md',
+        homepage: 'readme.md',
 
+        // NAVIGATION
+        // -----------------------------------------------------------------
+        alias: {
+          '.*?/changelog':
+            'https://raw.githubusercontent.com/karlorz/docsify-demo/main/CHANGELOG.md'
+        },
         auto2top: true,
         maxLevel: 2,
         subMaxLevel: 2,
