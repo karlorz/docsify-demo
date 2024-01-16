@@ -2,9 +2,9 @@ ansible all --list-hosts
 sudo mkdir /etc/ansible
 sudo mv /etc/ansible/hosts /etc/ansible/hosts.20240116
 sudo nano /etc/ansible/hosts
-echo "[proxmox-lab]" | sudo tee -a /etc/ansible/hosts && echo "10.10.2.1" | sudo tee -a /etc/ansible/hosts
+echo "[proxmox_lab]" | sudo tee -a /etc/ansible/hosts && echo "10.10.2.1" | sudo tee -a /etc/ansible/hosts
 
-[proxmox-lab]
+[proxmox_lab]
 10.10.2.1
 
 sudo mv /etc/ansible/ansible.cfg /etc/ansible/ansible.cfg.20240116
@@ -35,3 +35,7 @@ sh
 Copy code
 ansible all -m ping -u root -K
 Again, this will prompt you for the sudo password interactively. Choose the option that fits your authentication setup.
+
+nano ~/proxmox_update.yml
+
+ansible-playbook -u root ~/proxmox_update.yml
