@@ -1,3 +1,3 @@
-- [Introduction](readme)
+- [Introduction](README)
 - [Quick Start](quick-start)
 - [Changelog](changelog)
