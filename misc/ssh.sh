@@ -13,12 +13,11 @@ sudo adduser ansible
 
 sudo usermod -aG adm,cdrom,sudo,dip,plugdev,lxd ansible 
 
-ssh-keygen -t ed25519 -f ~/.ssh/ansible-key
-
-cat ~/.ssh/ansible-key.pub
-
-ansible@ubuntu-server:~$ cat ~/.ssh/ansible-key.pub
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID50Z6CNqPpVa9t+KQ27KGIaDbiHWlbTj+f68TOnTm13 ansible@ubuntu-server
+# keygen without passphrase
+ssh-keygen -t ed25519 -f ~/.ssh/ansible-key -N "" -q -y
+# cat ~/.ssh/ansible-key.pub
+# ansible@ubuntu-server:~$ cat ~/.ssh/ansible-key.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiLk4bu58TwhnVr04gS4Pk4nl6UNhcyVt0wRpTHOJqp ansible@ubuntu-server
 
 paste pub key to pve_onboard.yml
 

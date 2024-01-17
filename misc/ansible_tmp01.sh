@@ -28,9 +28,14 @@ ansible all -m ping -u root
 
 ansible all -m ping -u root -k
 
+# test connection using root user with remote node password
 ansible proxmox_labs -i ~/inventory -m ping -u root -k
 
+ansible-playbook pve_onboard.yml -i inventory -u root -k
 
+ansible proxmox_labs -m ping -i inventory -u ansible --private-key ~/.ssh/ansible-key
+
+ansible-playbook pve_update.yml -i ~/inventory -u ansible --private-key ~/.ssh/ansible-key
 
 When using Ansible for the first time to ping a host, you might need to specify the password for the user. You can use the -k option to prompt for the password interactively. Here's an example:
 

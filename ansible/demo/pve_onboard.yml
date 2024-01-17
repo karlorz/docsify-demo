@@ -16,7 +16,7 @@
   - name: add Ansible ssh key
     authorized_key:
       user: ansible
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID50Z6CNqPpVa9t+KQ27KGIaDbiHWlbTj+f68TOnTm13 ansible@ubuntu-server"
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiLk4bu58TwhnVr04gS4Pk4nl6UNhcyVt0wRpTHOJqp ansible@ubuntu-server"
 
   - name: add ansible to sudoers
     copy:
