@@ -2,23 +2,33 @@ ansible all --list-hosts
 sudo mkdir /etc/ansible
 sudo mv /etc/ansible/hosts /etc/ansible/hosts.20240116
 sudo nano /etc/ansible/hosts
-echo "[proxmox_lab]" | sudo tee -a /etc/ansible/hosts && echo "10.10.2.1" | sudo tee -a /etc/ansible/hosts
+echo "[proxmox_labs]" | sudo tee -a /etc/ansible/hosts && echo "10.10.2.1" | sudo tee -a /etc/ansible/hosts
+
+# or
+echo "[proxmox_labs]" | tee -a ~/inventory && echo "10.10.2.1" | tee -a ~/inventory
 
 [proxmox_lab]
 10.10.2.1
 
 sudo mv /etc/ansible/ansible.cfg /etc/ansible/ansible.cfg.20240116
 echo -n | sudo tee /etc/ansible/ansible.cfg
-echo "[defaults]" | sudo tee -a ~/ansible.cfg && echo "host_key_checking=False" | sudo tee -a ~/ansible.cfg
+echo "[defaults]" | tee -a ~/ansible.cfg && echo "host_key_checking=False" | tee -a ~/ansible.cfg
+# or
 echo "[defaults]" | sudo tee -a /etc/ansible/ansible.cfg && echo "host_key_checking=False" | sudo tee -a /etc/ansible/ansible.cfg
 
-ansible-config init --disabled > /etc/ansible/ansible.cfg
+[defaults]
+host_key_checking=False
+interpreter_python=auto_silent
 
-ansible-config init --disabled | sudo tee /etc/ansible/ansible.cfg > /dev/null
+# ansible-config init --disabled > /etc/ansible/ansible.cfg
+
+# ansible-config init --disabled | sudo tee /etc/ansible/ansible.cfg > /dev/null
 
 ansible all -m ping -u root
 
 ansible all -m ping -u root -k
+
+ansible proxmox_labs -i ~/inventory -m ping -u root -k
 
 
 

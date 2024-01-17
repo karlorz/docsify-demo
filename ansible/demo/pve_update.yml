@@ -1,4 +1,4 @@
-- hosts: proxmox_lab
+- hosts: proxmox_labs
   become: yes
   become_user: root
 
