@@ -1,4 +1,4 @@
-- hosts: proxmox_labs
+- hosts: proxmox_labs:pbs
   tasks:
 
   - name: install sudo package
@@ -16,7 +16,7 @@
   - name: add Ansible ssh key
     authorized_key:
       user: ansible
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiLk4bu58TwhnVr04gS4Pk4nl6UNhcyVt0wRpTHOJqp ansible@ubuntu-server"
+      key: "{{ lookup('file', '/home/ansible/.ssh/ansible-key.pub') }}"
 
   - name: add ansible to sudoers
     copy:

@@ -24,12 +24,15 @@ interpreter_python=auto_silent
 
 # ansible-config init --disabled | sudo tee /etc/ansible/ansible.cfg > /dev/null
 
-ansible all -m ping -u root
+# ansible all -m ping -u root
 
-ansible all -m ping -u root -k
+# ansible all -m ping -u root -k
+
+# ansible-playbook test_localhost.yml
 
 # test connection using root user with remote node password
-ansible proxmox_labs -i ~/inventory -m ping -u root -k
+ansible proxmox_labs -i ./inventory -m ping -u root -k
+# ansible pbs -i ./inventory -m ping -u root -k
 
 ansible-playbook pve_onboard.yml -i inventory -u root -k
 
