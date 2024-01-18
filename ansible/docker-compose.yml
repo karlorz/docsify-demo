@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ansible-runner:
+    image: ghcr.io/ansible-community/community-ee-minimal:latest
+    container_name: ansible-runner
+    command: sh -c "ansible-runner worker && tail -f /dev/null"
+    volumes:
+    - ./demo:/runner
