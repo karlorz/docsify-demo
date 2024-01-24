@@ -1,4 +1,4 @@
-- hosts: proxmox_labs:pbs
+- hosts: proxmox_labs:all
   tasks:
 
   - name: Remove specified repository from sources list
@@ -28,7 +28,7 @@
       state: present
       filename: ceph
       update_cache: false
-      
+
   - name: install sudo package
     apt:
       name: sudo
