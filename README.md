@@ -8,7 +8,6 @@ A passionate backend developer from Hong Kong
 
 ## About me
 
-
 ###
 ✨ Creating bugs since 2008<br>
 📚 I'm currently learning docker and machine learning<br>
