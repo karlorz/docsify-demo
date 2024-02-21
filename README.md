@@ -9,11 +9,14 @@ A passionate backend developer from Hong Kong
 ## About me
 
 ###
+
 ✨ Creating bugs since 2008<br>
 📚 I'm currently learning docker and machine learning<br>
 🎯 Goals: make innovative and productive program 💰<br>
 🎲 And i like car driving 🚗 , swimming 🏊 and bicycling 🚴
+
 ###
+
 <h2 align="left">I code with</h2>
 
 ###
