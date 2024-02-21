@@ -7,3 +7,8 @@
 - Add 'changelog'
 - Init
 
+## side 1
+
+[react/next](https://next.karldigi.dev/)
+
+[proxmox](https://github.com/karlorz/docsify-demo)
