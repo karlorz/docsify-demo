@@ -1,6 +1,6 @@
 - [Introduction](README.md)
 - [Quick Start](quick-start.md)
 - **Hobbies**
-- [![desktop-computer](assets/img/desktop-computer.svg)Proxmox](https://github.com/karlcc/karlcc)
+- [![desktop-computer](assets/img/desktop-computer.svg)Proxmox Script](https://github.com/karlcc/karlcc)
 - [![Github](assets/img/github.svg)Github](https://github.com/karlcc)
 - ![Home](/)
