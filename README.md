@@ -6,9 +6,9 @@
 
 <p align="left">A passionate backend developer from Hong Kong</p>
 
-##
+## About me
 
-<h2 align="left">About me</h2>
+
 ###
 <p align="left">✨ Creating bugs since 2008<br>📚 I'm currently learning docker and machine learning<br>🎯 Goals: make innovative and productive program 💰<br>🎲 And i like car driving 🚗 , swimming 🏊 and bicycling 🚴</p>
 ###
